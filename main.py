@@ -6,6 +6,8 @@ import discord
 import asyncio
 from time import sleep
 from colorsys import hls_to_rgb
+from os import environ
+
 client = discord.Client()
 dothething = {}
 @client.event
@@ -57,4 +59,4 @@ async def on_message(message):
                                                         dothething[str(message.server.id)]=0
                                 else:
                                         await asyncio.sleep(10)
-client.run(bot_key)
+client.run(os.environ[bot_key])

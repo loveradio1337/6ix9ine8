@@ -1,6 +1,6 @@
 ##REPLACE THESE VALUES
 bot_key="BOT_TOKEN"
-default_role="Rainbow"
+default_role="RAINBOW"
 ##--------------------
 import discord
 import asyncio
@@ -58,5 +58,5 @@ async def on_message(message):
                                                         print("no perms" + str(message.server.name))
                                                         dothething[str(message.server.id)]=0
                                 else:
-                                        await asyncio.sleep(10)
+                                        await asyncio.sleep(5)
 client.run(os.environ[bot_key])
